@@ -66,6 +66,20 @@ public class HangmanTest {
 
 
 
+    @Test
+    public void testHangManInputWord_3_Threewords() throws Exception{
+
+        Hangman testHangMan = new Hangman();
+        List<String> testHangmanArray = new ArrayList<String>();
+        List<String> expectedOutputArray = new ArrayList<String>();
+
+         expectedOutputArray.add("turtle");
+         expectedOutputArray.add("bumblebee");
+         expectedOutputArray.add("keyboard");
+
+        assertEquals(expectedOutputArray, testHangMan.testThreeWords("turtle" , "bumblebee" , "keyboard"));
+    }
+
 
 
 }

@@ -39,5 +39,15 @@ public class Hangman {
         return dashWord;
     }
 
+    public List<String> testThreeWords(String inputWordOne , String inputWordTwo , String inputWordThree){
+
+        List<String> wordList = new ArrayList<String>();
+
+        wordList.add(inputWordOne);
+        wordList.add(inputWordTwo);
+        wordList.add(inputWordThree);
+
+        return wordList;
+    }
 
 }
