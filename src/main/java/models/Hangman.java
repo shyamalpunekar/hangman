@@ -2,6 +2,7 @@ package models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Guest on 8/2/17.
@@ -41,13 +42,27 @@ public class Hangman {
 
     public List<String> testThreeWords(String inputWordOne , String inputWordTwo , String inputWordThree){
 
-        List<String> wordList = new ArrayList<String>();
 
+        List<String> wordList = new ArrayList<String>();
         wordList.add(inputWordOne);
         wordList.add(inputWordTwo);
         wordList.add(inputWordThree);
 
         return wordList;
     }
+
+    public String getRandomWord(String inputWordOne , String inputWordTwo , String inputWordThree){
+
+        Random myRandomGenerator = new Random();
+        List<String> wordList = new ArrayList<String>();
+        wordList.add(inputWordOne);
+        wordList.add(inputWordTwo);
+        wordList.add(inputWordThree);
+
+        String randomWord = wordList.get(myRandomGenerator.nextInt(2));
+        return randomWord;
+    }
+
+
 
 }

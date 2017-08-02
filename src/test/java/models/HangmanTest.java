@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import static org.junit.Assert.*;
 
@@ -80,6 +81,19 @@ public class HangmanTest {
         assertEquals(expectedOutputArray, testHangMan.testThreeWords("turtle" , "bumblebee" , "keyboard"));
     }
 
+    @Test
+    public void testHangManGetRandomWord() throws Exception {
 
+        Hangman testHangMan = new Hangman();
+        Random myRandomGenerator = new Random();
+        List<String> testHangmanArray = new ArrayList<String>();
+        testHangmanArray.add("turtle");
+        testHangmanArray.add("bumblebee");
+        testHangmanArray.add("keyboard");
+        String expectedOutput = "turtle";
 
+        String randomWord = testHangMan.getRandomWord("turtle","bumblebee","keyboard");
+
+        assertEquals(expectedOutput, randomWord);
+    }
 }
