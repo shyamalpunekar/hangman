@@ -41,6 +41,31 @@ public class HangmanTest {
         assertEquals(expectedOutput, testHangMan.testLetter('t'));
     }
 
+    @Test
+    public void testHangManInputWord_1_word() throws Exception{
+
+        Hangman testHangMan = new Hangman();
+        List<String> testHangmanArray = new ArrayList<String>();
+
+        String expectedOutput = "turtle";
+
+        assertEquals(expectedOutput, testHangMan.testWord("turtle"));
+    }
+
+    @Test
+    public void testHangManReplaceWithDashes_dash() throws Exception{
+
+        Hangman testHangMan = new Hangman();
+        List<String> testHangmanArray = new ArrayList<String>();
+
+
+        String expectedOutput = "------";
+
+        assertEquals(expectedOutput, testHangMan.insertDash("turtle"));
+    }
+
+
+
 
 
 }
